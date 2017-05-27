@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cont">
+        <div id="progress"></div>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script>
+        $(window).scroll (function () {
+            var ratio = $(document).scrollTop() / (($(document).height() - $(window).height() ) / 100);
+            $('#progress').width (ratio + '%');
+        });
+    </script>
+</body>
+</html>
